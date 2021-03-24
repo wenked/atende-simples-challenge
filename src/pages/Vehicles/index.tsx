@@ -11,7 +11,6 @@ const Vehicles: React.FC = () => {
 
 	useEffect(() => {
 		if (data) {
-			console.log(data);
 			setVehicles(data.allVehicles.vehicles);
 		}
 	}, [data]);

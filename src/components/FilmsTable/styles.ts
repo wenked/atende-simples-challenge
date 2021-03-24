@@ -8,6 +8,7 @@ export const Container = styled.div`
 
 	#row-header {
 		font-weight: bold;
+		background-color: #009ffd;
 	}
 
 	@media (max-width: 800px) {

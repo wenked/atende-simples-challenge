@@ -1,5 +1,5 @@
 import { CustomButton } from '@components/Layout/CustomButton/styles';
-import { ItemListContainer } from '@components/Layout/ItemListContainer/styles';
+
 import { ListContainer } from '@components/Layout/ListContainer/styles';
 import React, { useState } from 'react';
 
@@ -9,6 +9,7 @@ import { ALLDATA_QUERY } from '@graphql/Queries';
 import { FilmsTable } from '@components/FilmsTable';
 import VehiclesTable from '@components/VehiclesTable';
 import { PeopleTable } from '@components/PeopleTable';
+import { Container } from './style';
 
 const AllData: React.FC = () => {
 	const { loading, error, data } = useQuery(ALLDATA_QUERY);
@@ -22,7 +23,7 @@ const AllData: React.FC = () => {
 		<h2>Loading...</h2>
 	) : (
 		<ListContainer>
-			<ItemListContainer>
+			<Container>
 				<CustomButton
 					onClick={() => {
 						setShowFilmData(!showFilmData);
@@ -30,9 +31,9 @@ const AllData: React.FC = () => {
 					Films
 				</CustomButton>
 				{showFilmData && <FilmsTable filmsData={data.allFilms.films} />}
-			</ItemListContainer>
+			</Container>
 
-			<ItemListContainer>
+			<Container>
 				<CustomButton
 					onClick={() => {
 						setShowPeopleData(!showPeopleData);
@@ -40,8 +41,8 @@ const AllData: React.FC = () => {
 					People
 				</CustomButton>
 				{showPeopleData && <PeopleTable peopleData={data.allPeople.people} />}
-			</ItemListContainer>
-			<ItemListContainer>
+			</Container>
+			<Container>
 				<CustomButton
 					onClick={() => {
 						setShowVehicleData(!showVehicleData);
@@ -51,7 +52,7 @@ const AllData: React.FC = () => {
 				{showVehicleData && (
 					<VehiclesTable vehiclesData={data.allVehicles.vehicles} />
 				)}
-			</ItemListContainer>
+			</Container>
 		</ListContainer>
 	);
 };

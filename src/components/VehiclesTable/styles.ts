@@ -9,6 +9,7 @@ export const Container = styled.div`
 
 	#row-header {
 		font-weight: bold;
+		background-color: #c84c09;
 	}
 
 	@media (max-width: 1340px) {

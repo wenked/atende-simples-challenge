@@ -11,7 +11,6 @@ const Films: React.FC = () => {
 
 	useEffect(() => {
 		if (data) {
-			console.log(data);
 			setFilms(data.allFilms.films);
 		}
 	}, [data]);

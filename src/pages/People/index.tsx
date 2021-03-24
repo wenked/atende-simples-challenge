@@ -12,7 +12,6 @@ const People: React.FC = () => {
 	useEffect(() => {
 		if (data) {
 			if (data) {
-				console.log(data);
 				setPeople(data.allPeople.people);
 			}
 		}

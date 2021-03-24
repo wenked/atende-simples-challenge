@@ -25,7 +25,14 @@ export const FilmsTable: React.FC<FilmsTableProps> = ({ filmsData }) => {
 						<Cell data-title='Director'>{film.director}</Cell>
 						<Cell data-title='Opening Crawl'>{film.openingCrawl}</Cell>
 						<Cell data-title='Producers'>
-							{film.producers.map((producer) => producer)}
+							{film.producers.map((producer, i) => {
+								return (
+									<React.Fragment key={i}>
+										{producer}
+										<br />
+									</React.Fragment>
+								);
+							})}
 						</Cell>
 						<Cell data-title='Release Date'>{film.releaseDate}</Cell>
 					</React.Fragment>
