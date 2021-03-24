@@ -6,9 +6,9 @@ const NavBar: React.FC = () => {
 	return (
 		<StyledNavBar>
 			<Link to='/'>Home</Link>
-			<Link to='/filmes'>Filmes</Link>
-			<Link to='/pessoas'>Pessoas</Link>
-			<Link to='/veiculos'>Veículos</Link>
+			<Link to='/films'>Filmes</Link>
+			<Link to='/people'>Pessoas</Link>
+			<Link to='/vehicles'>Veículos</Link>
 		</StyledNavBar>
 	);
 };

@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import App from './App';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+
+const client = new ApolloClient({
+	uri:
+		'https://cors-anywhere.herokuapp.com/https://swapi-wenked.herokuapp.com/',
+	cache: new InMemoryCache(),
+});
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<ApolloProvider client={client}>
+			<App />
+		</ApolloProvider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
