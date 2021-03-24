@@ -1,13 +1,16 @@
 import React from 'react';
 import GlobalStyle from './styles/global';
-import Veiculos from './pages/Veiculos';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './Routes';
+import NavBar from '@components/Layout/NavBar';
 
 const App: React.FC = () => {
 	return (
-		<div>
+		<Router>
+			<NavBar />
+			<Routes />
 			<GlobalStyle />
-			<Veiculos />
-		</div>
+		</Router>
 	);
 };
 

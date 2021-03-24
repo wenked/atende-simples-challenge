@@ -8,9 +8,9 @@ export default createGlobalStyle`
  }
 
  body {
-   background: #f5f5f5;
+   background: #232528;
    font-size: 14px;
-   color:#333;
+   color:#eaf6ff;
    font-family:sans-serif  
  }
 
