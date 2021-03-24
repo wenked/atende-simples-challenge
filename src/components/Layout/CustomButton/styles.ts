@@ -8,6 +8,9 @@ export const CustomButton = styled.button`
 	color: inherit;
 	font-weight: 600;
 	transition: all 0.3s ease-in;
+	padding: 10px;
+	margin: 10px;
+	font-size: large;
 	&:hover {
 		color: #009ffd;
 	}

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-	margin: 2rem;
+export const ListContainer = styled.div`
 	padding: 2rem;
+	margin: 2rem;
 `;

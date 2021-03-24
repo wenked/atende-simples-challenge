@@ -4,8 +4,7 @@ import App from './App';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-	uri:
-		'https://cors-anywhere.herokuapp.com/https://swapi-wenked.herokuapp.com/',
+	uri: 'https://swapi-wenked.herokuapp.com/',
 	cache: new InMemoryCache(),
 });
 

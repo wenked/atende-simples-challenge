@@ -22,3 +22,23 @@ export interface vehicleInterface {
 	cargoCapacity: number;
 	consumables: string;
 }
+
+export interface peopleInterface {
+	id: string;
+	name: string;
+	birthYear: string;
+	eyeColor: string;
+	gender: string;
+	hairColor: string;
+	height: number;
+	mass: number;
+	skinColor: string;
+	homeworld: {
+		name: string;
+	};
+	species: {
+		name: string;
+	};
+}
+
+export interface allDataInterface {}

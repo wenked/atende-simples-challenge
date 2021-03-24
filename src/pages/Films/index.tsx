@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Container } from './styles';
-import { useQuery, gql } from '@apollo/client';
-import { FILMS_QUERY } from '@graphql/Queries';
+import { useQuery } from '@apollo/client';
+import { FILMSTITLES_QUERY } from '@graphql/Queries';
 import { filmInterface } from 'src/types';
-import Film from '@components/Film';
+import { ItemListContainer } from '@components/Layout/ItemListContainer/styles';
+import { ListContainer } from '@components/Layout/ListContainer/styles';
 
 const Films: React.FC = () => {
-	const { error, loading, data } = useQuery(FILMS_QUERY);
+	const { error, loading, data } = useQuery(FILMSTITLES_QUERY);
 	const [films, setFilms] = useState<filmInterface[]>();
 
 	useEffect(() => {
@@ -16,14 +16,18 @@ const Films: React.FC = () => {
 		}
 	}, [data]);
 
-	return loading ? (
+	return error ? (
+		<h2>Failed to fetch data</h2>
+	) : loading ? (
 		<h2>Loading...</h2>
 	) : (
-		<Container>
+		<ListContainer>
 			{films?.map((film) => {
-				return <Film film={film} key={film.id} />;
+				return (
+					<ItemListContainer key={film.id}>{film.title}</ItemListContainer>
+				);
 			})}
-		</Container>
+		</ListContainer>
 	);
 };
 

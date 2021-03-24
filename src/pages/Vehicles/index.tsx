@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Container } from './styles';
 import { useQuery } from '@apollo/client';
-import { VEHICLES_QUERY } from '@graphql/Queries';
+import { VEHICLESNAMES_QUERY } from '@graphql/Queries';
 import { vehicleInterface } from 'src/types';
-import Vehicle from '@components/Vehicle';
+import { ItemListContainer } from '@components/Layout/ItemListContainer/styles';
+import { ListContainer } from '@components/Layout/ListContainer/styles';
 
 const Vehicles: React.FC = () => {
-	const { error, loading, data } = useQuery(VEHICLES_QUERY);
+	const { error, loading, data } = useQuery(VEHICLESNAMES_QUERY);
 	const [vehicles, setVehicles] = useState<vehicleInterface[]>();
 
 	useEffect(() => {
@@ -16,14 +16,16 @@ const Vehicles: React.FC = () => {
 		}
 	}, [data]);
 
-	return loading ? (
+	return error ? (
+		<h2>Failed to fetch data</h2>
+	) : loading ? (
 		<h2>Loading...</h2>
 	) : (
-		<Container>
+		<ListContainer>
 			{vehicles?.map((vehicle) => (
-				<Vehicle key={vehicle.id} vehicle={vehicle} />
+				<ItemListContainer key={vehicle.id}>{vehicle.name}</ItemListContainer>
 			))}
-		</Container>
+		</ListContainer>
 	);
 };
 
