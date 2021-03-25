@@ -22,10 +22,12 @@ const vehicles = [
 
 describe('rendering component', () => {
 	it('rendering without crashing', () => {
-		shallow(
+		const wrapper = mount(
 			<MockedProvider>
 				<VehiclesTable vehiclesData={vehicles} />
 			</MockedProvider>
 		);
+		console.log(wrapper.debug());
+		expect(wrapper.find('Cell').text()).toEqual('Name');
 	});
 });
