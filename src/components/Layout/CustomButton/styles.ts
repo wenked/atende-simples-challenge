@@ -15,3 +15,5 @@ export const CustomButton = styled.button`
 		color: #009ffd;
 	}
 `;
+
+CustomButton.displayName = 'CustomButton';

@@ -17,7 +17,7 @@ const Films: React.FC = () => {
 	}, [data]);
 
 	return error ? (
-		<h2>Failed to fetch data</h2>
+		<LoadingContainer>Failed to fetch data</LoadingContainer>
 	) : loading ? (
 		<LoadingContainer>Loading...</LoadingContainer>
 	) : (

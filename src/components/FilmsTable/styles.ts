@@ -34,3 +34,5 @@ export const Cell = styled.div`
 		}
 	}
 `;
+
+Cell.displayName = 'FilmsCell';

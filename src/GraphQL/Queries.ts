@@ -43,8 +43,6 @@ export const ALLDATA_QUERY = gql`
 				director
 				producers
 				releaseDate
-				created
-				edited
 				id
 			}
 		}

@@ -35,3 +35,5 @@ export const Cell = styled.div`
 		}
 	}
 `;
+
+Cell.displayName = 'VehicleCell';

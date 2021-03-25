@@ -1,7 +1,7 @@
 import { CustomButton } from '@components/Layout/CustomButton/styles';
 
 import { ListContainer } from '@components/Layout/ListContainer/styles';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { useQuery } from '@apollo/client';
 import { ALLDATA_QUERY } from '@graphql/Queries';
@@ -18,6 +18,12 @@ const Home: React.FC = () => {
 	const [showVehicleData, setShowVehicleData] = useState(false);
 	const [showPeopleData, setShowPeopleData] = useState(false);
 
+	useEffect(() => {
+		if (data) {
+			console.log(data);
+		}
+	}, [data]);
+
 	return error ? (
 		<h2>Failed to fetch data</h2>
 	) : loading ? (
@@ -26,8 +32,9 @@ const Home: React.FC = () => {
 		</LoadingContainer>
 	) : (
 		<ListContainer>
-			<Container>
+			<Container id='filmsbutton'>
 				<CustomButton
+					id='normal-button'
 					onClick={() => {
 						setShowFilmData(!showFilmData);
 					}}>
