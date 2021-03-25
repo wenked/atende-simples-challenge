@@ -10,8 +10,9 @@ import { FilmsTable } from '@components/FilmsTable';
 import VehiclesTable from '@components/VehiclesTable';
 import { PeopleTable } from '@components/PeopleTable';
 import { Container } from './style';
+import { LoadingContainer } from '@components/Layout/LoadingContainer/styles';
 
-const AllData: React.FC = () => {
+const Home: React.FC = () => {
 	const { loading, error, data } = useQuery(ALLDATA_QUERY);
 	const [showFilmData, setShowFilmData] = useState(false);
 	const [showVehicleData, setShowVehicleData] = useState(false);
@@ -20,7 +21,9 @@ const AllData: React.FC = () => {
 	return error ? (
 		<h2>Failed to fetch data</h2>
 	) : loading ? (
-		<h2>Loading...</h2>
+		<LoadingContainer>
+			<h2>Loading...</h2>
+		</LoadingContainer>
 	) : (
 		<ListContainer>
 			<Container>
@@ -57,4 +60,4 @@ const AllData: React.FC = () => {
 	);
 };
 
-export default AllData;
+export default Home;

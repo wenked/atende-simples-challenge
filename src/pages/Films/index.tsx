@@ -4,6 +4,7 @@ import { FILMSTITLES_QUERY } from '@graphql/Queries';
 import { filmInterface } from 'src/types';
 import { ItemListContainer } from '@components/Layout/ItemListContainer/styles';
 import { ListContainer } from '@components/Layout/ListContainer/styles';
+import { LoadingContainer } from '@components/Layout/LoadingContainer/styles';
 
 const Films: React.FC = () => {
 	const { error, loading, data } = useQuery(FILMSTITLES_QUERY);
@@ -18,7 +19,7 @@ const Films: React.FC = () => {
 	return error ? (
 		<h2>Failed to fetch data</h2>
 	) : loading ? (
-		<h2>Loading...</h2>
+		<LoadingContainer>Loading...</LoadingContainer>
 	) : (
 		<ListContainer>
 			{films?.map((film) => {

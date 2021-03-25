@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import AllData from './index';
+import Home from './index';
 import { FilmsTable } from '@components/FilmsTable';
 import { MockedProvider } from '@apollo/client/testing';
 
@@ -21,7 +21,7 @@ describe('rendering component', () => {
 	it('rendering without crashing', () => {
 		mount(
 			<MockedProvider>
-				<AllData />
+				<Home />
 			</MockedProvider>
 		);
 	});

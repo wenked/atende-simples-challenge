@@ -1,15 +1,16 @@
 import { MockedProvider } from '@apollo/client/testing';
+import { render } from '@testing-library/react';
 import { mount, shallow } from 'enzyme';
 import React from 'react';
 import VehiclesTable from './index';
 
 const vehicles = [
 	{
-		id: 'sdasdasd',
-		name: 'asdasd',
+		id: 'xcvvxcggh',
+		name: 'John',
 		model: 'sdasdasd',
-		vehicleClass: 'asdfasdas',
-		manufacturers: ['adfasdasd'],
+		vehicleClass: 'asdfasdasxd',
+		manufacturers: ['adfasdaxasqqsd'],
 		costInCredits: 123,
 		length: 123,
 		crew: '2323',
@@ -22,12 +23,13 @@ const vehicles = [
 
 describe('rendering component', () => {
 	it('rendering without crashing', () => {
-		const wrapper = mount(
+		const wrapper = render(
 			<MockedProvider>
 				<VehiclesTable vehiclesData={vehicles} />
 			</MockedProvider>
 		);
 		console.log(wrapper.debug());
-		expect(wrapper.find('Cell').text()).toEqual('Name');
+		expect(wrapper.container.innerHTML).toMatch('Name');
+		expect(wrapper.container.innerHTML).toMatch('John');
 	});
 });

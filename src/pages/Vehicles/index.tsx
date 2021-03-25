@@ -4,6 +4,7 @@ import { VEHICLESNAMES_QUERY } from '@graphql/Queries';
 import { vehicleInterface } from 'src/types';
 import { ItemListContainer } from '@components/Layout/ItemListContainer/styles';
 import { ListContainer } from '@components/Layout/ListContainer/styles';
+import { LoadingContainer } from '@components/Layout/LoadingContainer/styles';
 
 const Vehicles: React.FC = () => {
 	const { error, loading, data } = useQuery(VEHICLESNAMES_QUERY);
@@ -18,7 +19,9 @@ const Vehicles: React.FC = () => {
 	return error ? (
 		<h2>Failed to fetch data</h2>
 	) : loading ? (
-		<h2>Loading...</h2>
+		<LoadingContainer>
+			<h2>Loading...</h2>
+		</LoadingContainer>
 	) : (
 		<ListContainer>
 			{vehicles?.map((vehicle) => (
