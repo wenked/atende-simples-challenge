@@ -119,6 +119,23 @@ describe('rendering component', () => {
 	});
 });
 
+test('snapshot', async () => {
+	const { container } = render(
+		<MockedProvider
+			mocks={[mocks]}
+			addTypename={false}
+			defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}>
+			<Home />
+		</MockedProvider>
+	);
+
+	await act(async () => {
+		await new Promise((resolve) => setTimeout(resolve, 1000));
+	});
+
+	expect(container.firstChild).toMatchSnapshot();
+});
+
 describe('passing props ', () => {
 	const FilmsWrapper = mount(<FilmsTable filmsData={filmsDataa} />);
 	it('accepts filmsData props', () => {

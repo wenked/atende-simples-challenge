@@ -6,3 +6,5 @@ export const ItemListContainer = styled.div`
 	border: 1px solid white;
 	border-radius: 5px;
 `;
+
+ItemListContainer.displayName = 'ItemListContainer';

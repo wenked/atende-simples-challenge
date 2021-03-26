@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<div
+  class="sc-gsTCUz uRvXt"
+>
+  <div
+    class="sc-bdfBwQ vBmnt"
+  >
+    Luke Skywalker
+  </div>
+  <div
+    class="sc-bdfBwQ vBmnt"
+  >
+    C-3PO
+  </div>
+  <div
+    class="sc-bdfBwQ vBmnt"
+  >
+    R2-D2
+  </div>
+  <div
+    class="sc-bdfBwQ vBmnt"
+  >
+    Darth Vader
+  </div>
+</div>
+`;

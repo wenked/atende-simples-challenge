@@ -6,7 +6,7 @@ interface PeopleTableProps {
 	peopleData: peopleInterface[];
 }
 
-export const PeopleTable: React.FC<PeopleTableProps> = ({ peopleData }) => {
+const PeopleTable: React.FC<PeopleTableProps> = ({ peopleData }) => {
 	return (
 		<Container>
 			<Cell id='row-header'>ID</Cell>
@@ -43,3 +43,5 @@ export const PeopleTable: React.FC<PeopleTableProps> = ({ peopleData }) => {
 		</Container>
 	);
 };
+
+export default PeopleTable;

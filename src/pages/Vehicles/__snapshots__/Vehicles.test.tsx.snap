@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<div
+  class="sc-gsTCUz uRvXt"
+>
+  <div
+    class="sc-bdfBwQ vBmnt"
+  >
+    Sand Crawler
+  </div>
+  <div
+    class="sc-bdfBwQ vBmnt"
+  >
+    T-16 skyhopper
+  </div>
+  <div
+    class="sc-bdfBwQ vBmnt"
+  >
+    X-34 landspeeder
+  </div>
+  <div
+    class="sc-bdfBwQ vBmnt"
+  >
+    TIE/LN starfighter
+  </div>
+  <div
+    class="sc-bdfBwQ vBmnt"
+  >
+    Snowspeeder
+  </div>
+</div>
+`;

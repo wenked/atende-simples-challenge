@@ -7,7 +7,7 @@ import { render } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
 import People from './index';
 
-const mockss = [
+const mocks = [
 	{
 		request: {
 			query: PEOPLENAMES_QUERY,
@@ -42,7 +42,7 @@ const mockss = [
 describe('rendering component', () => {
 	it('rendering without crashing', async () => {
 		let wrapper = mount(
-			<MockedProvider mocks={mockss} addTypename={false}>
+			<MockedProvider mocks={mocks} addTypename={false}>
 				<People />
 			</MockedProvider>
 		);
@@ -57,4 +57,21 @@ describe('rendering component', () => {
 			wrapper.contains(<div className='sc-bdfBwQ vBmnt'>Darth Vader</div>)
 		).toEqual(true);
 	});
+});
+
+test('snapshot', async () => {
+	const { container } = render(
+		<MockedProvider
+			mocks={mocks}
+			addTypename={false}
+			defaultOptions={{ watchQuery: { fetchPolicy: 'no-cache' } }}>
+			<People />
+		</MockedProvider>
+	);
+
+	await act(async () => {
+		await new Promise((resolve) => setTimeout(resolve, 1000));
+	});
+
+	expect(container.firstChild).toMatchSnapshot();
 });

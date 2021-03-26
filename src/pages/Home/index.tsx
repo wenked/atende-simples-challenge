@@ -1,14 +1,11 @@
 import { CustomButton } from '@components/Layout/CustomButton/styles';
-
 import { ListContainer } from '@components/Layout/ListContainer/styles';
 import React, { useEffect, useState } from 'react';
-
 import { useQuery } from '@apollo/client';
 import { ALLDATA_QUERY } from '@graphql/Queries';
-
 import { FilmsTable } from '@components/FilmsTable';
 import VehiclesTable from '@components/VehiclesTable';
-import { PeopleTable } from '@components/PeopleTable';
+import PeopleTable from '@components/PeopleTable';
 import { Container } from './style';
 import { LoadingContainer } from '@components/Layout/LoadingContainer/styles';
 
