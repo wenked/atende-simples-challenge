@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import Home from './index';
-import { FilmsTable } from '@components/FilmsTable';
+import FilmsTable from '@components/FilmsTable';
 import { MockedProvider } from '@apollo/client/testing';
 import { ALLDATA_QUERY } from '@graphql/Queries';
 import { act } from 'react-dom/test-utils';

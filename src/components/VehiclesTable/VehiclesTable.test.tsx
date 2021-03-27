@@ -22,7 +22,7 @@ const vehicles = [
 ];
 
 describe('rendering component', () => {
-	it('rendering without crashing', () => {
+	it('rendering table without crashing, and checking data', () => {
 		const wrapper = render(
 			<MockedProvider>
 				<VehiclesTable vehiclesData={vehicles} />

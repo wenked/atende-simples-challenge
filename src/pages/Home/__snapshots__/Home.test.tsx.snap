@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<div
+  class="sc-gsTCUz uRvXt"
+>
+  <div
+    class="sc-fubCfw dnDShV"
+    id="filmsbutton"
+  >
+    <button
+      class="sc-bdfBwQ cbDZcM"
+      id="normal-button"
+    >
+      Films
+    </button>
+  </div>
+  <div
+    class="sc-fubCfw dnDShV"
+  >
+    <button
+      class="sc-bdfBwQ cbDZcM"
+    >
+      People
+    </button>
+  </div>
+  <div
+    class="sc-fubCfw dnDShV"
+  >
+    <button
+      class="sc-bdfBwQ cbDZcM"
+    >
+      Vehicles
+    </button>
+  </div>
+</div>
+`;

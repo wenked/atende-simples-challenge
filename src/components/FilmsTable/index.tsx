@@ -6,7 +6,7 @@ interface FilmsTableProps {
 	filmsData: filmInterface[];
 }
 
-export const FilmsTable: React.FC<FilmsTableProps> = ({ filmsData }) => {
+const FilmsTable: React.FC<FilmsTableProps> = ({ filmsData }) => {
 	return (
 		<Container>
 			<Cell id='row-header'>Episode Id</Cell>
@@ -41,3 +41,5 @@ export const FilmsTable: React.FC<FilmsTableProps> = ({ filmsData }) => {
 		</Container>
 	);
 };
+
+export default FilmsTable;

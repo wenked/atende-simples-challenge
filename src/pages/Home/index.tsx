@@ -3,7 +3,7 @@ import { ListContainer } from '@components/Layout/ListContainer/styles';
 import React, { useEffect, useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { ALLDATA_QUERY } from '@graphql/Queries';
-import { FilmsTable } from '@components/FilmsTable';
+import FilmsTable from '@components/FilmsTable';
 import VehiclesTable from '@components/VehiclesTable';
 import PeopleTable from '@components/PeopleTable';
 import { Container } from './style';
